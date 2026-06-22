@@ -2,7 +2,6 @@ import React, {useEffect,useState} from 'react'
 import {deleteEmployee, listEmployees} from '../services/EmployeeService'
 import { useNavigate } from 'react-router-dom'
 
-
 const ListEmployeeComponent = () => {
 
     const [employees,setEmployees] =  useState([])
@@ -38,8 +37,6 @@ const ListEmployeeComponent = () => {
             console.error(error);
         })
     }
-
-   
 
   return (
     <div className="container">

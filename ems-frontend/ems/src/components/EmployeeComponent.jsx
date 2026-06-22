@@ -8,7 +8,7 @@ const EmployeeComponent = () => {
     const [lastName, setLastName]  = useState('')
     const [email, setEmail]  = useState('')
 
-    const {id}=useParams();
+    const {id} = useParams();
    
 
     const [errors,setErrors] = useState({
@@ -27,9 +27,8 @@ const EmployeeComponent = () => {
                 setEmail(response.data.email)
             }).catch(error => {
                 console.error(error);
-            } )
+            })
         }
-
      },[id])
 
     function saveOrUpdateEmployee(e){
@@ -46,9 +45,7 @@ const EmployeeComponent = () => {
                     navigator('/employees')
                 }).catch(error=>{
                     console.error(error);
-
                 })
-
             }else{    
                 createEmployee(employee).then((response) => {
                     console.log(response.data);
@@ -57,11 +54,7 @@ const EmployeeComponent = () => {
                     console.error(error);
                 })
             }
-           
-
-
         }
-  
     }
 
     function validateForm(){
@@ -80,7 +73,6 @@ const EmployeeComponent = () => {
         }else{
             errorsCopy.lastName='Last name is required';
             valid = false;
-
         }
        
         if(email.trim()){
@@ -100,7 +92,6 @@ const EmployeeComponent = () => {
         }else{
             return <h2 className='text-center'>Add Employee</h2>
         }
-
     }
 
     return (
@@ -153,9 +144,7 @@ const EmployeeComponent = () => {
                                     >
                                 </input>
                                 {errors.email && <div className='invalid-feedback'> {errors.email}</div>}
-
                             </div>
-
                             <button className='btn btn-success' onClick={saveOrUpdateEmployee}>Submit</button>
                         </form>
                     </div>
