@@ -1,4 +1,5 @@
-**EMPLOYEE MANAGEMENT SYSTEM**<br/>
+**EMPLOYEE MANAGEMENT SYSTEM**  
+
 This project enables the user add, update and delete employees
 
 
