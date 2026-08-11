@@ -28,8 +28,14 @@ Mysql
 2)  open the backend project in your IDE (Intellij) then run the backend first
 3)   open the front end in VS code
 
+npm install  
 
-npm install
+npm run dev
+
+
+
+
+
 
 npm run dev
 
